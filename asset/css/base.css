@@ -1,0 +1,134 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: #ee4d2d;
+    --border-color: #dbdbdb;
+    --hover-color: #fafafa;
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+
+}
+/* Default: 1rem = 16px */
+html {
+    font-size: 62.5%; /* 1rem = 10px*/
+    line-height: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+
+}
+
+
+/* Reposive */
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+
+}
+
+.grid__full-width {
+    width: 100%;
+
+}
+
+.grid__row {
+    display: flex;
+    /* flex-wrap: wrap; */
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.grid__column-2 {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 16.667%;
+}
+
+.grid__column-2-4 {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 20%;
+}
+
+.grid__column-10 {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 83.334%;
+
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    animation: fadeIn linear .1s;
+}
+
+/* Button style */
+.btn {
+    display: block;
+    min-width: 142px;
+    height: 36px;
+    border: none;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    font-weight: 500;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--text-color);
+    text-decoration: none;
+    line-height: 36px;
+    
+}
+
+.btn:hover {
+    background-color: #e4e4e4;
+
+}
+
+.btn.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn.btn--disable {
+    background-color: #999;
+    color: #ccc;
+    cursor: default;
+
+}
+
+/* Selection */
+.select-input {
+    position: relative;
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
